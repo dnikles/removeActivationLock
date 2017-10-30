@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# pretty much taken straight from https://bryson3gps.wordpress.com/2016/11/15/scripting-the-stuff-that-you-think-is-only-in-the-jss-gui/
+
 
 import requests, argparse
 
