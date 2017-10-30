@@ -6,7 +6,7 @@ Series of scripts to let you look up the activation lock bypass code in JSS and 
 1. Install [Apple Configurator 2](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
 2. Launch Apple Configurator 2, and under the Apple Configurator 2 menu, choose Install Automation Tools...
 3. Grab a copy of [jq](https://stedolan.github.io/jq/) and put it in the same directory as these scripts (you can get away with not using jq if you modify the scripts to use xml instead of JSON and use a combo of xpath and some string manipulation to get the data you want)
-4. Edit getbypasscode.py and enter a username and password for a JSS user with appropriate rights (must be able to download config profiles and get activation lock bypass code) as well as the JSS url. Note the url must be placed in 3 places. Also, pick a random config profile number that exists in your JSS (used to generate the session token, you can use a different action to generate it if you'd like)
+4. Edit getbypasscode.py and enter a username and password for a JSS user with appropriate rights (must be able to download config profiles and get activation lock bypass code) as well as the JSS url. Also, pick a random config profile number that exists in your JSS (used to generate the session token, you can use a different action to generate it if you'd like)
 5. Edit unlockiPad.sh and enter the username, password, and url for your JSS
 
 ## Using these scripts
