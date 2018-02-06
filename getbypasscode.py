@@ -24,9 +24,10 @@ def get_session_token(html_text):
         if 'session-token' in line:
             return line.encode('utf-8').translate(None, '<>"').split('=')[-1]
          
-
-session_token = get_session_token(session.get(jssAddress+'/iOSConfigurationProfiles.html?id='+configProfileID+'&o=r').text)            
+#take out "legacy/" below if you are still on jamf 9
+session_token = get_session_token(session.get(jssAddress+'/legacy/iOSConfigurationProfiles.html?id='+configProfileID+'&o=r').text)            
 
 data = {'session-token': session_token, 'ajaxAction': 'AJAX_ACTION_READ_BYPASS_CODE'}
 r = session.post(jssAddress+'/mobileDevices.ajax?id=%s&o=r&v=management' % args.jssid, data=data)
 print r.content
+
